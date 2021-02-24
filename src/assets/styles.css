@@ -1,5 +1,44 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   background: #222;
+
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+}
+
+.fade-enter-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.fade-leave-active {
+  transition: all 0.1s ease;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(3%);
+}
+
+.fade-leave-to {
+  opacity: 0;
+  transform: translateX(-20%);
 }

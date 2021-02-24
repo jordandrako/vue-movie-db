@@ -1,16 +1,21 @@
 <template>
-  <ul>
-    <li v-for="movie in movies" :key="movie.id">
-      <Movie :movie="movie" />
-    </li>
-  </ul>
+  <div class="MoviesList">
+    <ul>
+      <li v-for="movie in movies" :key="movie.id">
+        <Movie :movie="movie" />
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
-import Movie from './Movie.vue';
+import Movie from '@/components/Movie.vue';
 
 export default {
   name: 'MoviesList',
+  metaInfo: {
+    title: 'Movies List',
+  },
   data() {
     return {
       movies: [],
@@ -39,6 +44,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.MoviesList {
+  position: absolute;
+  width: 100%;
+}
+
 ul {
   display: grid;
   list-style: none;

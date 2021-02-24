@@ -1,6 +1,8 @@
 <template>
   <header>
-    <h1>{{ newTitle }}</h1>
+    <h1>
+      <router-link to="/"><img src="@/assets/logo.svg" :alt="title" /></router-link>
+    </h1>
   </header>
 </template>
 
@@ -12,13 +14,8 @@ export default {
   },
   data() {
     return {
-      name: 'Jordan',
+      show: false,
     };
-  },
-  computed: {
-    newTitle() {
-      return this.title.toUpperCase();
-    },
   },
 };
 </script>
@@ -28,8 +25,15 @@ header {
   background: #111;
   padding: 20px;
   color: white;
+  text-align: center;
 }
+
 h1 {
   margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 </style>
