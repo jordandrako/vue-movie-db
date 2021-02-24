@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header :title="title" />
-    <transition name="fade"><router-view /></transition>
+    <div class="page">
+      <transition name="fade"><router-view /></transition>
+    </div>
   </div>
 </template>
 
@@ -27,8 +29,15 @@ export default {
 <style lang="scss">
 #app {
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
   width: 100%;
   height: 100%;
+}
+
+.page {
+  max-width: 1280px;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
 }
 </style>
